@@ -1,6 +1,7 @@
 package com.example.gmailapp
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var subject: TextView
     private lateinit var fullMessage: TextView
     private lateinit var date: TextView
+    private lateinit var backButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +24,7 @@ class DetailActivity : AppCompatActivity() {
         subject = findViewById(R.id.details_subject)
         fullMessage = findViewById(R.id.details_email_message)
         date = findViewById(R.id.details_time)
+        backButton = findViewById(R.id.backButton)
 
 
         val profileImageResource = intent.getIntExtra("profileImage", 0)
@@ -36,5 +39,11 @@ class DetailActivity : AppCompatActivity() {
         subject.text = subjectText
         fullMessage.text = fullMessageText
         date.text = dateText
+
+
+        backButton.isEnabled = true
+        backButton.setOnClickListener {
+            finish()
+        }
     }
 }
