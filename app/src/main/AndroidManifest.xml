@@ -14,7 +14,6 @@
         android:theme="@style/Theme.GmailApp"
         tools:targetApi="31">
 
-
         <activity
             android:name=".LoginActivity"
             android:exported="true"
@@ -25,18 +24,15 @@
             </intent-filter>
         </activity>
 
-
         <activity
             android:name=".ListActivity"
             android:exported="false"
-            android:theme="@style/Theme.GmailApp" />
-
+            android:theme="@style/Theme.AppCompat.Light" />
 
         <activity
             android:name=".DetailActivity"
             android:exported="false"
-            android:theme="@style/Theme.GmailApp" />
+            android:theme="@style/Theme.AppCompat.Light" />
 
     </application>
-
 </manifest>
